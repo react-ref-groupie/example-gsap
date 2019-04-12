@@ -1,0 +1,5 @@
+@import '../mixins/controls.scss';
+
+.controls {
+  @include controls;
+}
