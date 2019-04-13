@@ -10,18 +10,17 @@ const StatelessSquares = ({
   iterate
 }) => {
   const [
-    ready,
-    {
-      squares: {
-        moveLeft,
-        moveRight
-      }
-    },
     {
       squares: {
         firstSquare,
         secondSquare,
         thirdSquare,
+      }
+    },
+    {
+      squares: {
+        moveLeft,
+        moveRight
       }
     }
   ] = useRefGroups({
@@ -31,10 +30,6 @@ const StatelessSquares = ({
       thirdSquare
     `
   });
-
-  if (!ready) {
-    return null;
-  }
 
   return (
     <div

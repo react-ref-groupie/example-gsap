@@ -7,18 +7,10 @@ class Circles extends React.Component {
   constructor(props) {
     super(props);
 
-    this.refGroups = props.getRefGroups({
-      circles: `
-        firstCircle
-        secondCircle
-        thirdCircle
-      `
-    });
-
     this.state = {
       toggled: false,
       num: 0,
-      squaresConfig: false
+      circlesConfig: true
     };
   }
 
@@ -36,25 +28,26 @@ class Circles extends React.Component {
       }
     } = this.props;
 
-    const { toggled } = this.state;
-
-    const { squaresConfig } = this.state;
+    const {
+      toggled,
+      circlesConfig
+    } = this.state;
 
     if (toggled) {
-      if (squaresConfig) {
-        moveLeft(this.increment);
-      } else {
+      if (circlesConfig) {
         moveUp(this.increment);
+      } else {
+        moveLeft(this.increment);
       }
     } else {
-      if (squaresConfig) {
-        moveRight(this.increment);
-      } else {
+      if (circlesConfig) {
         moveDown(this.increment);
+      } else {
+        moveRight(this.increment);
       }
     }
 
-    if (!squaresConfig) {
+    if (circlesConfig) {
       this.setState(({ toggled }) => ({ toggled: !toggled }));
     }
   };
@@ -62,70 +55,65 @@ class Circles extends React.Component {
   increment = () => this.setState(({ num }) => ({ num: num + 1 }));
 
   setCirclesConfig = () => {
-    this.refGroups = this.props.getRefGroups({
-      circles: `
-        firstCircle
-        secondCircle
-        thirdCircle
-      `
-    });
-
-    this.setState({ squaresConfig: false });
+    this.setState({ circlesConfig: true });
   };
 
   setSquaresConfig = () => {
-    this.refGroups = this.props.getRefGroups({
-      squares: `
-        firstSquare
-        secondSquare
-        thirdSquare
-      `
-    });
-
-    this.setState({ squaresConfig: true });
+    this.setState({ circlesConfig: false });
   };
 
   render() {
     const {
       num,
-      squaresConfig
+      circlesConfig
     } = this.state;
 
     let refGroup;
-
-    if (squaresConfig) {
-      const {
-        squares: {
-          firstSquare,
-          secondSquare,
-          thirdSquare
-        }
-      } = this.refGroups;
-
-      refGroup = {
-        firstRef: firstSquare,
-        secondRef: secondSquare,
-        thirdRef: thirdSquare
-      };
-    } else {
+    if (circlesConfig) {
       const {
         circles: {
           firstCircle,
           secondCircle,
           thirdCircle
         }
-      } = this.refGroups;
-
+      } = this.props.getRefGroups({
+        circles: `
+          firstCircle
+          secondCircle
+          thirdCircle
+        `
+      });
+  
       refGroup = {
         firstRef: firstCircle,
         secondRef: secondCircle,
         thirdRef: thirdCircle
-      };
+      }
+    } else {
+      const {
+        squares: {
+          firstSquare,
+          secondSquare,
+          thirdSquare
+        }
+      } = this.props.getRefGroups({
+        squares: `
+          firstSquare
+          secondSquare
+          thirdSquare
+        `
+      });
+  
+      refGroup = {
+        firstRef: firstSquare,
+        secondRef: secondSquare,
+        thirdRef: thirdSquare
+      }
     }
 
     return (
       <React.Fragment>
-        <div className={`config config--${squaresConfig ? 'squares' : 'circles'}`}>
+        <div className={`config config--${circlesConfig ? 'circles' : 'squares'}`}>
           <div
             className="config__toggle"
             onClick={this.setCirclesConfig}

@@ -10,18 +10,17 @@ const StatelessCircles = ({
   iterate
 }) => {
   const [
-    ready,
-    {
-      circles: {
-        moveUp,
-        moveDown
-      }
-    },
     {
       circles: {
         firstCircle,
         secondCircle,
         thirdCircle
+      }
+    },
+    {
+      circles: {
+        moveUp,
+        moveDown
       }
     }
   ] = useRefGroups({
@@ -31,10 +30,6 @@ const StatelessCircles = ({
       thirdCircle
     `
   });
-
-  if (!ready) {
-    return null;
-  }
 
   return (
     <div

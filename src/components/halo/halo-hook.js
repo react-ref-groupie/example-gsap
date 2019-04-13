@@ -5,8 +5,6 @@ import './halo.scss'
 
 const HaloHook = () => {
   const [
-    ready,
-    {},
     {
       circles: {
         halo
@@ -15,10 +13,6 @@ const HaloHook = () => {
   ] = useRefGroups({
     circles: 'halo'
   });
-
-  if (!ready) {
-    return null;
-  }
 
   return <div ref={halo} className="halo" />
 };
