@@ -19,8 +19,8 @@
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TweenPlugin; });
 /* unused harmony export EventDispatcher */
 /*!
- * VERSION: 2.1.1
- * DATE: 2019-02-21
+ * VERSION: 2.1.2
+ * DATE: 2019-03-01
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -1191,7 +1191,7 @@ var TweenLite = function (window) {
   p.ratio = 0;
   p._firstPT = p._targets = p._overwrittenProps = p._startAt = null;
   p._notifyPluginsOfEnabled = p._lazy = false;
-  TweenLite.version = "2.1.1";
+  TweenLite.version = "2.1.2";
   TweenLite.defaultEase = p._ease = new Ease(null, null, 1, 1);
   TweenLite.defaultOverwrite = "auto";
   TweenLite.ticker = _ticker;
@@ -2933,8 +2933,8 @@ var TweenLite = __webpack_require__(0);
 
 // CONCATENATED MODULE: ./node_modules/gsap/TimelineLite.js
 /*!
- * VERSION: 2.1.1
- * DATE: 2019-02-21
+ * VERSION: 2.1.2
+ * DATE: 2019-03-01
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -3019,7 +3019,7 @@ TweenLite["e" /* _gsScope */]._gsDefine("TimelineLite", ["core.Animation", "core
     var ir = "immediateRender";
 
     if (!(ir in toVars)) {
-      toVars[ir] = !(tl._paused || fromVars && fromVars[ir] === false || defaultFalse);
+      toVars[ir] = !(fromVars && fromVars[ir] === false || defaultFalse);
     }
 
     return toVars;
@@ -3100,7 +3100,7 @@ TweenLite["e" /* _gsScope */]._gsDefine("TimelineLite", ["core.Animation", "core
   },
       p = TimelineLite.prototype = new TweenLite["c" /* SimpleTimeline */]();
 
-  TimelineLite.version = "2.1.1";
+  TimelineLite.version = "2.1.2";
   TimelineLite.distribute = _distribute;
   p.constructor = TimelineLite;
   p.kill()._gc = p._forcingPlayhead = p._hasPause = false;
@@ -3991,8 +3991,8 @@ var TimelineLite_TimelineLite = TweenLite["g" /* globals */].TimelineLite;
 
 // CONCATENATED MODULE: ./node_modules/gsap/TweenMaxBase.js
 /*!
- * VERSION: 2.1.1
- * DATE: 2019-02-21
+ * VERSION: 2.1.2
+ * DATE: 2019-03-01
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -4125,7 +4125,7 @@ TweenLite["e" /* _gsScope */]._gsDefine("TweenMax", ["core.Animation", "core.Sim
       p = TweenMax.prototype = TweenLite["f" /* default */].to({}, 0.1, {}),
       _blankArray = [];
 
-  TweenMax.version = "2.1.1";
+  TweenMax.version = "2.1.2";
   p.constructor = TweenMax;
   p.kill()._gc = false;
   TweenMax.killTweensOf = TweenMax.killDelayedCallsTo = TweenLite["f" /* default */].killTweensOf;
@@ -8875,8 +8875,8 @@ DirectionalRotationPlugin._autoCSS = true;
 
 // CONCATENATED MODULE: ./node_modules/gsap/TimelineMax.js
 /*!
- * VERSION: 2.1.1
- * DATE: 2019-02-21
+ * VERSION: 2.1.2
+ * DATE: 2019-03-01
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -8909,7 +8909,7 @@ TweenLite["e" /* _gsScope */]._gsDefine("TimelineMax", ["TimelineLite", "TweenLi
 
   p.constructor = TimelineMax;
   p.kill()._gc = false;
-  TimelineMax.version = "2.1.1";
+  TimelineMax.version = "2.1.2";
 
   p.invalidate = function () {
     this._yoyo = !!this.vars.yoyo;
@@ -10704,8 +10704,8 @@ var EasePack_ExpoScaleEase = TweenLite["g" /* globals */].ExpoScaleEase;
 
 // CONCATENATED MODULE: ./node_modules/gsap/TweenMax.js
 /*!
- * VERSION: 2.1.1
- * DATE: 2019-02-21
+ * VERSION: 2.1.2
+ * DATE: 2019-03-01
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -10762,8 +10762,8 @@ TweenMax_TweenMax._autoActivated = [TimelineLite_TimelineLite, TimelineMax_Timel
 /* unused concated harmony import ExpoScaleEase */
 /* unused concated harmony import _gsScope */
 /*!
- * VERSION: 2.1.0
- * DATE: 2019-02-07
+ * VERSION: 2.1.2
+ * DATE: 2019-03-01
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -14581,7 +14581,7 @@ exports.default = HelmetExport;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.3
+/** @license React v16.8.6
  * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -14836,7 +14836,7 @@ function V(a, b, d, c, e) {
 
 function W() {
   var a = I.current;
-  null === a ? B("307") : void 0;
+  null === a ? B("321") : void 0;
   return a;
 }
 
@@ -14992,7 +14992,7 @@ var X = {
     return b;
   },
   isValidElement: N,
-  version: "16.8.3",
+  version: "16.8.6",
   unstable_ConcurrentMode: x,
   unstable_Profiler: u,
   __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: {
@@ -15012,7 +15012,7 @@ module.exports = Z.default || Z;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.3
+/** @license React v16.8.6
  * react-dom.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -16844,11 +16844,12 @@ function Md(a, b) {
 function Nd() {
   for (var a = window, b = Jd(); b instanceof a.HTMLIFrameElement;) {
     try {
-      a = b.contentDocument.defaultView;
-    } catch (c) {
-      break;
+      var c = "string" === typeof b.contentWindow.location.href;
+    } catch (d) {
+      c = !1;
     }
 
+    if (c) a = b.contentWindow;else break;
     b = Jd(a.document);
   }
 
@@ -18266,7 +18267,7 @@ var Nf = 0,
     eg = 0;
 
 function fg() {
-  x("307");
+  x("321");
 }
 
 function gg(a, b) {
@@ -18360,6 +18361,7 @@ function pg(a) {
   var b = ng(),
       c = b.queue;
   null === c ? x("311") : void 0;
+  c.lastRenderedReducer = a;
 
   if (0 < eg) {
     var d = c.dispatch;
@@ -18378,8 +18380,7 @@ function pg(a) {
         bd(f, b.memoizedState) || (qg = !0);
         b.memoizedState = f;
         b.baseUpdate === c.last && (b.baseState = f);
-        c.eagerReducer = a;
-        c.eagerState = f;
+        c.lastRenderedState = f;
         return [f, d];
       }
     }
@@ -18409,8 +18410,7 @@ function pg(a) {
     b.memoizedState = f;
     b.baseUpdate = h;
     b.baseState = e;
-    c.eagerReducer = a;
-    c.eagerState = f;
+    c.lastRenderedState = f;
   }
 
   return [b.memoizedState, c.dispatch];
@@ -18501,8 +18501,8 @@ function wg(a, b, c) {
       g.next = f;
     }
     b.last = f;
-    if (0 === a.expirationTime && (null === d || 0 === d.expirationTime) && (d = b.eagerReducer, null !== d)) try {
-      var l = b.eagerState,
+    if (0 === a.expirationTime && (null === d || 0 === d.expirationTime) && (d = b.lastRenderedReducer, null !== d)) try {
+      var l = b.lastRenderedState,
           k = d(l, c);
       f.eagerReducer = d;
       f.eagerState = k;
@@ -18556,8 +18556,8 @@ var kg = {
     a = d.queue = {
       last: null,
       dispatch: null,
-      eagerReducer: a,
-      eagerState: b
+      lastRenderedReducer: a,
+      lastRenderedState: b
     };
     a = a.dispatch = wg.bind(null, Xf, a);
     return [d.memoizedState, a];
@@ -18576,8 +18576,8 @@ var kg = {
     a = b.queue = {
       last: null,
       dispatch: null,
-      eagerReducer: og,
-      eagerState: a
+      lastRenderedReducer: og,
+      lastRenderedState: a
     };
     a = a.dispatch = wg.bind(null, Xf, a);
     return [b.memoizedState, a];
@@ -20300,13 +20300,13 @@ function ai(a) {
                 g && kh(b);
               } else {
                 m = b;
-                e = f;
-                p = g;
+                p = f;
+                e = g;
                 k = 9 === h.nodeType ? h : h.ownerDocument;
-                l === fe.html && (l = ge(e));
-                l === fe.html ? "script" === e ? (e = k.createElement("div"), e.innerHTML = "<script>\x3c/script>", k = e.removeChild(e.firstChild)) : "string" === typeof p.is ? k = k.createElement(e, {
-                  is: p.is
-                }) : (k = k.createElement(e), "select" === e && p.multiple && (k.multiple = !0)) : k = k.createElementNS(l, e);
+                l === fe.html && (l = ge(p));
+                l === fe.html ? "script" === p ? (e = k.createElement("div"), e.innerHTML = "<script>\x3c/script>", k = e.removeChild(e.firstChild)) : "string" === typeof e.is ? k = k.createElement(p, {
+                  is: e.is
+                }) : (k = k.createElement(p), "select" === p && (p = k, e.multiple ? p.multiple = !0 : e.size && (p.size = e.size))) : k = k.createElementNS(l, p);
                 e = k;
                 e[Fa] = m;
                 e[Ga] = g;
@@ -21471,7 +21471,7 @@ function Ui(a, b) {
 })({
   findFiberByHostInstance: Ha,
   bundleType: 0,
-  version: "16.8.3",
+  version: "16.8.6",
   rendererPackageName: "react-dom"
 });
 
@@ -21497,7 +21497,7 @@ if (true) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/** @license React v0.13.3
+/* WEBPACK VAR INJECTION */(function(global) {/** @license React v0.13.6
  * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -22090,55 +22090,12 @@ function _interopRequireDefault(obj) {
   };
 }
 
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
-}
-
-function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
 var useRefGroups = function useRefGroups(obj) {
   var _useContext = (0, _react.useContext)(_provider.RefGroupContext),
       _useContext$refGroups = _useContext.refGroups,
       refGroupsMethods = _useContext$refGroups.refGroupsMethods,
       internalRefs = _useContext$refGroups.internalRefs,
       updateRefGroups = _useContext.updateRefGroups;
-
-  var _useState = (0, _react.useState)(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      ready = _useState2[0],
-      setReady = _useState2[1];
 
   var self = (0, _react.useRef)();
   (0, _react.useEffect)(function () {
@@ -22147,15 +22104,20 @@ var useRefGroups = function useRefGroups(obj) {
       memoized: {}
     };
     self.current.refGroups = (0, _initRefGroups.default)(self.current, internalRefs, obj, updateRefGroups);
-    setReady(true);
     return function () {
       var memoized = self.current.memoized;
+      var shouldUpdate = false;
 
       for (var groupName in memoized) {
         for (var refName in memoized[groupName]) {
           var internalRef = memoized[groupName][refName];
           (0, _helpers.clearRefByMark)(internalRef, self.current.mark);
+          shouldUpdate = true;
         }
+      }
+
+      if (shouldUpdate) {
+        updateRefGroups();
       }
     };
   }, []);
@@ -22170,7 +22132,7 @@ var useRefGroups = function useRefGroups(obj) {
     refGroups = self.current.refGroups;
   }
 
-  return [ready, refGroupsMethods, refGroups];
+  return [refGroups, refGroupsMethods];
 };
 
 var _default = useRefGroups;
@@ -22330,18 +22292,20 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(GroupManager).call(this, props));
 
-    _defineProperty(_assertThisInitialized(_this), "componentDidMount", function () {
-      _this.setState({
-        ready: true
-      });
-    });
-
     _defineProperty(_assertThisInitialized(_this), "componentWillUnmount", function () {
+      var updateRefGroups = _this.props.updateRefGroups;
+      var shouldUpdate = false;
+
       for (var groupName in _this.memoized) {
         for (var refName in _this.memoized[groupName]) {
           var internalRef = _this.memoized[groupName][refName];
           (0, _helpers.clearRefByMark)(internalRef, _this.mark);
+          shouldUpdate = true;
         }
+      }
+
+      if (shouldUpdate) {
+        updateRefGroups();
       }
     });
 
@@ -22352,9 +22316,6 @@ function (_React$Component) {
       return (0, _initRefGroups.default)(_assertThisInitialized(_this), internalRefs, obj, updateRefGroups);
     });
 
-    _this.state = {
-      ready: false
-    };
     _this.memoized = {};
     _this.mark = Math.random();
     return _this;
@@ -22363,12 +22324,6 @@ function (_React$Component) {
   _createClass(GroupManager, [{
     key: "render",
     value: function render() {
-      var ready = this.state.ready;
-
-      if (!ready) {
-        return null;
-      }
-
       var _this$props2 = this.props,
           refGroupsMethods = _this$props2.refGroups.refGroupsMethods,
           WrappedComponent = _this$props2.WrappedComponent,
@@ -28635,4 +28590,4 @@ module.exports = function (originalModule) {
 
 /***/ })
 ]]);
-//# sourceMappingURL=2.b8ed8cb2.chunk.js.map
+//# sourceMappingURL=2.ee0659e2.chunk.js.map
